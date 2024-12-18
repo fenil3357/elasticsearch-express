@@ -5,6 +5,8 @@ import morgan from "morgan";
 
 import client from "./config/elasticsearch.config.js";
 
+import productRouter from "./routes/product.routes.js";
+
 dotenv.config();
 
 const PORT = process.env.PORT || 3030;
@@ -15,6 +17,13 @@ app.use(morgan('dev'));
 app.use(express.json({
   limit: '50mb'
 }));
+
+app.use('/api/products', productRouter);
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ message: 'Something went wrong!' });
+});
 
 app.listen(PORT, async () => {
   try {
