@@ -1,2 +1,2 @@
 # elasticsearch-express
-Sample project with elasticsearch operations in express.js
+Elastic search integration in express.js
