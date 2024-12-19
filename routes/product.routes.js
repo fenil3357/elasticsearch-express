@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import { bulkIndexProductsController, createProductIndexController, deleteProductController, updateProductController } from "../controllers/product.controller.js";
 
 const productRouter = Router();

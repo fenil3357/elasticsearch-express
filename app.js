@@ -6,6 +6,7 @@ import morgan from "morgan";
 import client from "./config/elasticsearch.config.js";
 
 import productRouter from "./routes/product.routes.js";
+import searchRouter from "./routes/search.routes.js";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json({
 }));
 
 app.use('/api/products', productRouter);
+app.use('/api/search', searchRouter)
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
