@@ -7,6 +7,7 @@ import client from "./config/elasticsearch.config.js";
 
 import productRouter from "./routes/product.routes.js";
 import searchRouter from "./routes/search.routes.js";
+import analyticsRouter from "./routes/analytics.routes.js";
 
 dotenv.config();
 
@@ -20,7 +21,8 @@ app.use(express.json({
 }));
 
 app.use('/api/products', productRouter);
-app.use('/api/search', searchRouter)
+app.use('/api/search', searchRouter);
+app.use('/api/analytics', analyticsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
