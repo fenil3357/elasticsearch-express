@@ -16,6 +16,7 @@ export const createProductIndexController = async (req, res) => {
             inStock: { type: 'boolean' },
             rating: { type: 'float' },
             location: { type: 'geo_point' },
+            quantity: { type: 'integer' }
           },
         },
       },
