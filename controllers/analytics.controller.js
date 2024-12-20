@@ -17,7 +17,7 @@ export const popularProductsController = async (req, res) => {
     return res.json(result.hits.hits);
   } catch (error) {
     console.log("🚀 ~ popularProductsController ~ error:", error)
-    return res.status(500).json({ error: error?.message })
+    return res.status(500).json({ message: error?.message })
   }
 }
 
@@ -46,7 +46,7 @@ export const categoryStatsController = async (req, res) => {
     return res.json(result.aggregations);
   } catch (error) {
     console.log("🚀 ~ categoryStatsController ~ error:", error)
-    return res.status(500).json({ error: error?.message })
+    return res.status(500).json({ message: error?.message })
   }
 }
 
@@ -71,7 +71,7 @@ export const pricesDistributionController = async (req, res) => {
     return res.json(result.aggregations);
   } catch (error) {
     console.log("🚀 ~ pricesDistributionController ~ error:", error)
-    return res.status(500).json({ error: error?.message })
+    return res.status(500).json({ message: error?.message })
   }
 }
 
@@ -111,6 +111,6 @@ export const trendingProductsController = async (req, res) => {
     return res.json(result.hits.hits)
   } catch (error) {
     console.log("🚀 ~ tendingProductsController ~ error:", error)
-    return res.status(500).json({ error: error?.message })
+    return res.status(500).json({ message: error?.message })
   }
 }

@@ -7,6 +7,7 @@ export const createProductIndexController = async (req, res) => {
       body: {
         mappings: {
           properties: {
+            id: { type: 'integer' },
             name: { type: 'text' },
             description: { type: 'text' },
             price: { type: 'float' },
@@ -14,12 +15,11 @@ export const createProductIndexController = async (req, res) => {
             tags: { type: 'keyword' },
             inStock: { type: 'boolean' },
             rating: { type: 'float' },
-            createdAt: { type: 'date' }
-          }
-        }
-      }
+            location: { type: 'geo_point' },
+          },
+        },
+      },
     });
-
     return res.json({ message: 'Product index created successfully!' })
   } catch (error) {
     console.log("🚀 ~ createProductIndexController ~ error:", error)
