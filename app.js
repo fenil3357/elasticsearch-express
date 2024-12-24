@@ -10,6 +10,7 @@ import searchRouter from "./routes/search.routes.js";
 import analyticsRouter from "./routes/analytics.routes.js";
 import geoSpatialRouter from "./routes/geospatial.routes.js";
 import inventoryRouter from "./routes/inventory.routes.js";
+import recommendationsRouter from "./routes/recommendations.routes.js";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use('/api/search', searchRouter);
 app.use('/api/analytics', analyticsRouter);
 app.use('/api/geo', geoSpatialRouter);
 app.use('/api/inventory', inventoryRouter);
+app.use('/api/recommendations', recommendationsRouter);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
