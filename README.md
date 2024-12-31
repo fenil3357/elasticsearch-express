@@ -38,6 +38,8 @@ npm install
 npm run dev
 ```
 
-3) For bulk Indexing the test data
+3) For bulk Indexing random test data
 
-I have included the script to bulk index the products data into elasticsearch so you can insert the data and test the APIs using that data. The script is in the **bulkIndex.js** file. (You can install the axios package and run that script externally)
+```
+npm run  bulk-index
+```

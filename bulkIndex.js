@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from "axios";
 
 // Categories and Tags to Randomize
 const categories = ["Electronics", "Fashion", "Home & Kitchen", "Books", "Sports", "Automobile"];
